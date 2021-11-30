@@ -69,3 +69,14 @@ INSERT INTO animals (
     escape_attempts,
     neutered,
     weight_kg) VALUES ('Blossom', '1998-10-13', 3, true, 17);
+
+BEGIN;
+
+UPDATE animals
+SET species = 'unspecified';
+
+SELECT * FROM animals;
+
+ROLLBACK;
+
+SELECT * FROM animals;
