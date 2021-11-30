@@ -92,3 +92,11 @@ SET species = 'pokemon'
 WHERE species IS NULL;
 
 COMMIT;
+
+BEGIN;
+
+DELETE FROM animals;
+
+ROLLBACK;
+
+SELECT * FROM animals;
