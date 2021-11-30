@@ -2,7 +2,7 @@
 
 SELECT * 
 FROM animals 
-WHERE name LIKE '%mon%';
+WHERE name LIKE '%mon';
 
 SELECT name
 FROM animals
