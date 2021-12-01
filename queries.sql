@@ -35,7 +35,7 @@ WHERE weight_kg BETWEEN 10.4 AND 17.3;
 SELECT COUNT(*) FROM animals;
 
 SELECT COUNT(*) FROM animals
-WHERE escape_attempts > 0;
+WHERE escape_attempts = 0;
 
 SELECT AVG(weight_kg) FROM animals;
 
