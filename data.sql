@@ -194,3 +194,19 @@ INSERT INTO vets (name, age, date_of_graduation)
 VALUES ('Jack Harkness', 38, '2008-06-08');
 
 COMMIT;
+
+BEGIN;
+
+INSERT INTO specializations (vets_id, species_id)
+VALUES (1, 1);
+
+INSERT INTO specializations (vets_id, species_id)
+VALUES (3, 1);
+
+INSERT INTO specializations (vets_id, species_id)
+VALUES (3, 2);
+
+INSERT INTO specializations (vets_id, species_id)
+VALUES (4, 2);
+
+COMMIT;
