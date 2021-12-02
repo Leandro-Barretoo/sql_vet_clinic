@@ -80,3 +80,6 @@ CREATE TABLE visits(
     FOREIGN KEY(animals_id)
       REFERENCES animals(id)
 );
+
+ALTER TABLE visits
+ADD visit_date DATE;
