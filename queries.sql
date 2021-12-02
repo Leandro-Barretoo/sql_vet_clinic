@@ -54,3 +54,39 @@ FROM animals
 INNER JOIN owners
 ON owner_id = owners.id
 WHERE owners.full_name = 'Melody Pond';
+
+SELECT *
+FROM animals
+INNER JOIN species
+ON species_id = species.id
+WHERE species.name = 'Pokemon';
+
+SELECT *
+FROM owners
+LEFT JOIN animals
+ON owners.id = animals.owner_id;
+
+SELECT species.name, COUNT(*)
+FROM animals
+INNER JOIN species
+ON species_id = species.id
+GROUP BY species.id;
+
+SELECT animals.name, owners.full_name, species.name
+FROM animals
+INNER JOIN owners ON owner_id = owners.id
+INNER JOIN species ON species_id = species.id
+WHERE owners.full_name = 'Jennifer Orwell'
+AND species.name = 'Digimon';
+
+SELECT animals.name, animals.escape_attempts, owners.full_name
+FROM animals
+INNER JOIN owners ON owner_id = owners.id
+WHERE owners.full_name = 'Dean Winchester'
+AND animals.escape_attempts = 0;
+
+SELECT owners.full_name, COUNT(animals.owner_id)
+FROM animals
+FULL JOIN owners
+ON animals.owner_id = owners.id
+GROUP BY owners.id;
